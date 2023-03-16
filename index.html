@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Launch Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Launch Calculator</h1>
+      <p>Enter the dimensions and weight of your package to find the appropriate product:</p>
+      <div class="form-group row">
+        <label for="length" class="col-sm-2 col-form-label">Length:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="length" placeholder="Enter length">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="width" class="col-sm-2 col-form-label">Width:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="width" placeholder="Enter width">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="height" class="col-sm-2 col-form-label">Height:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="height" placeholder="Enter height">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="weight" class="col-sm-2 col-form-label">Weight:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="weight" placeholder="Enter weight">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>
+    </div>
+
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultModalLabel">Shipping Product</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="resultMessage"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
