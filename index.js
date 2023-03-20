@@ -18,7 +18,7 @@ $(document).ready(function() {
     var product = null;
 
     $.ajax({
-        url: 'localhost:3000/products',
+        url: 'http://127.0.0.1:3000/find_by_dimensions',
         method: 'GET',
         data: {
           length: length,
@@ -26,9 +26,12 @@ $(document).ready(function() {
           height: height,
           weight: weight
         },
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        async: false,
         success: function(data) {
           if (data.length > 0) {
-            product = data[0];
+            product = data;
             $('#productModalBody').html('Use this ' + product.name);
             $('#productModal').modal('show');
             setTimeout(function() {
