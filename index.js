@@ -32,11 +32,11 @@ $(document).ready(function() {
         success: function(data) {
           if (data.length > 0) {
             product = data;
-            $('#productModalBody').html('Use this ' + product.name);
-            $('#productModal').modal('show');
+            $('#resultMessage').html('Use this ' + product.name);
+            $('#resultModal').modal('show');
             setTimeout(function() {
-              $('#productModal').modal('hide');
-              $('#productName').html(product.name);
+              $('#resultMessage').modal('hide');
+              $('#resultModal').html(product.name);
             }, 5000);
           } else {
             alert('No product found for the entered dimensions and weight');
